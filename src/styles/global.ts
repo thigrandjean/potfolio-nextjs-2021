@@ -9,6 +9,7 @@ const GlobalStyles = createGlobalStyle`
 :root{
     --color-main: #362158;
     --color-sec: #FEA521;
+    --color-thi: #9347F5;
     --white: #EBF0F5;
 
     --radius-sm: .2rem
@@ -23,6 +24,9 @@ html, body, #__next {
 body {
     font-family: 'Roboto Mono', monospace;
     background: var(--color-main)
+}
+p{
+    line-height: 140%;
 }
 `
 
