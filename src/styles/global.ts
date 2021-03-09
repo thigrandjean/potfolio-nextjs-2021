@@ -6,6 +6,14 @@ const GlobalStyles = createGlobalStyle`
     padding: 0;
     box-sizing: border-box;
 }
+:root{
+    --color-main: #362158;
+    --color-sec: #FEA521;
+    --white: #EBF0F5;
+
+    --radius-sm: .2rem
+
+}
 html {
     font-size: 62.5%;
 }
@@ -13,7 +21,8 @@ html, body, #__next {
     height: 100%;
 }
 body {
-    font-family: --apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif
+    font-family: 'Roboto Mono', monospace;
+    background: var(--color-main)
 }
 `
 
