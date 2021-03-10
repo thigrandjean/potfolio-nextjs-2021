@@ -1,13 +1,14 @@
 import Bio from 'components/Bio'
+import SiteFooter from 'components/SiteFooter'
 import SiteHero from 'components/Hero'
-import SiteHeader from 'components/SiteHeader'
 
 export default function HomeTemplate() {
   return (
     <>
-      <SiteHeader />
       <SiteHero />
       <Bio />
+
+      <SiteFooter />
     </>
   )
 }

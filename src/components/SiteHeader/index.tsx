@@ -1,8 +1,9 @@
 import * as S from './styles'
+import Link from 'next/link'
 
 const SiteHeader = () => (
   <S.Logo>
-    <a aria-label="bio">
+    <Link href="/" aria-label="bio">
       <svg
         width="43"
         height="43"
@@ -17,7 +18,7 @@ const SiteHeader = () => (
           fill="currentColor"
         />
       </svg>
-    </a>
+    </Link>
   </S.Logo>
 )
 
