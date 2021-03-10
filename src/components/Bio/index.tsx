@@ -1,4 +1,5 @@
 import TxtBar from 'components/TxtBar'
+import Link from 'next/link'
 import * as S from './styles'
 
 const Bio = () => (
@@ -8,6 +9,9 @@ const Bio = () => (
       nessa coisa de criar anúncios, peças de publicidade, projetos gráficos,
       editar vídeos e desenvolver sites.
     </TxtBar>
+    <S.BioLinks>
+      <Link href="/contact">Entrar em contato</Link>
+    </S.BioLinks>
   </S.Wrapper>
 )
 

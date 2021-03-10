@@ -47,9 +47,10 @@ export const HeroImage = styled.div`
   justify-content: center;
   top: 0;
   z-index: 0;
-  img {
+  /* img {
     width: 100%;
+    height: 100%;
     object-fit: cover;
     display: none;
-  }
+  } */
 `

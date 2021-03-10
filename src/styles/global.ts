@@ -12,7 +12,9 @@ const GlobalStyles = createGlobalStyle`
     --color-thi: #9347F5;
     --white: #EBF0F5;
 
-    --radius-sm: .2rem
+    --radius-sm: .2rem;
+
+    --content-width: 25rem;
 
 }
 html {

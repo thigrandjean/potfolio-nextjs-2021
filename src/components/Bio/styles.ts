@@ -22,3 +22,10 @@ export const Wrapper = styled.section`
     top: 0;
   }
 `
+export const BioLinks = styled.div`
+  margin-top: 2rem;
+  font-size: 1.25rem;
+  a {
+    color: var(--color-sec);
+  }
+`

@@ -31,4 +31,5 @@ export const Button = styled.button`
   height: 2.5rem;
   width: 15rem;
   align-self: flex-end;
+  font-weight: 700;
 `
