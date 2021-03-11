@@ -32,4 +32,9 @@ export const Button = styled.button`
   width: 15rem;
   align-self: flex-end;
   font-weight: 700;
+  cursor: pointer;
+  transition: background 0.3s ease-in-out;
+  &:hover {
+    background: var(--color-thi);
+  }
 `

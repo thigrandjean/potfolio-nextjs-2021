@@ -27,5 +27,9 @@ export const BioLinks = styled.div`
   font-size: 1.25rem;
   a {
     color: var(--color-sec);
+    transition: color 0.3s ease-in-out;
+    &:hover {
+      color: var(--color-thi);
+    }
   }
 `

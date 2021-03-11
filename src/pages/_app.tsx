@@ -2,6 +2,7 @@ import type { AppProps /*, AppContext */ } from 'next/app'
 import Head from 'next/head'
 import SiteHeader from 'components/SiteHeader'
 import GlobalStyles from 'styles/global'
+import NextNprogress from 'nextjs-progressbar'
 
 function App({ Component, pageProps }: AppProps) {
   return (
@@ -21,6 +22,13 @@ function App({ Component, pageProps }: AppProps) {
         />
       </Head>
       <GlobalStyles />
+      <NextNprogress
+        color="#FEA521"
+        startPosition={0.3}
+        stopDelayMs={200}
+        height={2}
+        options={{ showSpinner: false }}
+      />
       <SiteHeader />
       <Component {...pageProps} />
     </>
