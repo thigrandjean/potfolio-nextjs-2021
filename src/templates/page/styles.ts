@@ -12,9 +12,12 @@ export const PageWrapper = styled.section`
 `
 export const Heading = styled.h1`
   font-size: 1.75rem;
-  width: 100%;
-  color: var(--white);
+  /* width: 100%; */
+  /* background: var(--color-sec); */
+  color: var(--color-sec);
   text-align: center;
+  padding: 0.25rem 0.5rem;
+  margin-bottom: 0.75rem;
 `
 export const Content = styled.div`
   font-size: 1.2rem;
@@ -37,7 +40,7 @@ export const CloseBtn = styled.div`
   svg {
     width: 100%;
   }
-  &:hover {
+  &::hover {
     color: var(--color-sec);
     background: rgba(255, 255, 255, 0.1);
   }

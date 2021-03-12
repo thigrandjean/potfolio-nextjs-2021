@@ -26,19 +26,19 @@ export default function PostList({ posts }: PostProps) {
   return (
     <>
       {posts.map(({ title, slug, content, tags, coverImage }, index) => {
+        const isEven = index % 2 != 0 ? true : false
         return (
           <S.PostWrapper key={slug}>
-            <S.PostCover>
+            <S.PostCover isRight={isEven}>
               <Image
                 src={coverImage[0].url}
                 alt={title}
-                // width={coverImage[0].width}
-                // height={coverImage[0].height}
                 layout="fill"
                 objectFit="cover"
               />
             </S.PostCover>
             <S.PostContent>
+              <S.Title>{title}</S.Title>
               <TxtBar>{content}</TxtBar>
               <S.Tags>
                 {tags.map((tag) => {
@@ -46,7 +46,9 @@ export default function PostList({ posts }: PostProps) {
                 })}
               </S.Tags>
             </S.PostContent>
-            <S.IndexNum>{index < 8 ? `0${index + 1}` : index + 1}</S.IndexNum>
+            <S.IndexNum isLeft={isEven}>
+              {index < 8 ? `0${index + 1}` : index + 1}
+            </S.IndexNum>
           </S.PostWrapper>
         )
       })}

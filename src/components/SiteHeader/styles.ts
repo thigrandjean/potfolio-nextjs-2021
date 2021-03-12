@@ -10,7 +10,10 @@ export const Logo = styled.header`
   z-index: 1000;
   background: var(--color-main);
   border-radius: 4rem;
-  svg .logobg {
+  cursor: pointer;
+  svg {
+    width: 100%;
+    height: 100%;
     /* fill: var(--color-main); */
   }
 `

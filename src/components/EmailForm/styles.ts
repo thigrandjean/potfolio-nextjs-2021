@@ -13,10 +13,15 @@ export const Label = styled.label`
 export const Input = styled.input`
   height: 2.5rem;
   width: 100%;
-  font-size: 1.5rem;
+  font-size: 1.25rem;
   padding: 0.5rem 0.5rem;
   border: none;
   border-radius: var(--radius-sm);
+  background-color: #beb9c0;
+  &:focus {
+    background-color: var(--white);
+    outline: none;
+  }
 `
 export const TextArea = styled(Input)`
   min-height: 10rem;
@@ -34,7 +39,8 @@ export const Button = styled.button`
   font-weight: 700;
   cursor: pointer;
   transition: background 0.3s ease-in-out;
-  &:hover {
-    background: var(--color-thi);
+  &:hover,
+  &:focus {
+    color: var(--color-thi);
   }
 `

@@ -47,10 +47,21 @@ export const HeroImage = styled.div`
   justify-content: center;
   top: 0;
   z-index: 0;
-  /* img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    display: none;
-  } */
+
+  animation: placeholderShimmer 1.5s ease-in-out infinite alternate;
+  background: linear-gradient(
+    90deg,
+    var(--color-thi),
+    #691ecb,
+    #691ecb,
+    var(--color-thi)
+  );
+  @keyframes placeholderShimmer {
+    0% {
+      background-position: -40rem 0;
+    }
+    100% {
+      background-position: 40rem 0;
+    }
+  }
 `
