@@ -1,4 +1,4 @@
-import styled, { createGlobalStyle } from 'styled-components'
+import { createGlobalStyle } from 'styled-components'
 
 const GlobalStyles = createGlobalStyle`
 * {
@@ -27,7 +27,7 @@ html {
 } 
 }
 html, body, #__next {
-    height: 100%;
+    /* height: 100%; */
 }
 body {
     font-family: 'Roboto Mono', monospace;
