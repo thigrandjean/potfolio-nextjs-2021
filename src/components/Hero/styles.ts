@@ -8,8 +8,12 @@ export const HeroContainer = styled.section`
   align-items: center;
   justify-content: flex-end;
   padding-bottom: 5rem;
-  position: relative;
   padding: 3rem;
+  position: sticky;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 0;
 `
 export const Heading = styled.h1`
   color: var(--white);

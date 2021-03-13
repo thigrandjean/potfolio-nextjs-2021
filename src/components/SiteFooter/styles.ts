@@ -8,6 +8,7 @@ export const Footer = styled.footer`
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  position: relative;
 `
 
 export const FooterContent = styled.div`

@@ -6,6 +6,7 @@ export const PostWrapper = styled.section`
   flex-direction: column;
   align-items: center;
   position: relative;
+  background: var(--color-main);
   @media (min-width: 1000px) {
     flex-direction: row;
   }

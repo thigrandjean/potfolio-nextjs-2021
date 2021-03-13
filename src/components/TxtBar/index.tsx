@@ -4,6 +4,12 @@ type TxtBVarProps = {
   children: React.ReactNode
 }
 
-const TxtBar = ({ children }: TxtBVarProps) => <S.Text>{children}</S.Text>
+const TxtBar = ({ children }: TxtBVarProps) => {
+  return (
+    <S.Text>
+      <span id="trigger">{children}</span>
+    </S.Text>
+  )
+}
 
 export default TxtBar

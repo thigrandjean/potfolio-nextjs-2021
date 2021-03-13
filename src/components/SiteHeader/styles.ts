@@ -11,9 +11,45 @@ export const Logo = styled.header`
   background: var(--color-main);
   border-radius: 4rem;
   cursor: pointer;
+  animation: bgEnter 0.5s cubic-bezier(0.72, 1.49, 0.63, 0.88);
   svg {
     width: 100%;
     height: 100%;
     /* fill: var(--color-main); */
+  }
+  .logot {
+    /* fill: ${({ theme }) => theme.colors.cor03}; */
+    fill: rgba(255, 255, 255, 0);
+    animation: draw 1s linear forwards 0.6s;
+    stroke-dasharray: 532;
+    stroke-dashoffset: -532;
+    stroke-width: 1px;
+    stroke: white;
+  }
+  @keyframes bgEnter {
+    0% {
+      transform: scale(0);
+    }
+    100% {
+      transform: scale(1);
+    }
+  }
+  @keyframes draw {
+    0% {
+      fill: rgba(255, 255, 255, 0);
+      stroke-dashoffset: -532;
+    }
+    50% {
+      fill: rgba(255, 255, 255, 0);
+      stroke-dashoffset: -632;
+    }
+    70% {
+      fill: rgba(255, 255, 255, 0);
+      stroke-dashoffset: -632;
+    }
+    100% {
+      fill: rgba(255, 255, 255, 1);
+      stroke-dashoffset: -632;
+    }
   }
 `
