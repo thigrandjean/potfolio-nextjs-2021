@@ -1,5 +1,9 @@
 import styled from 'styled-components'
 
+type LogoProps = {
+  isOut: boolean
+}
+
 export const Logo = styled.header`
   position: fixed;
   width: 4.3rem;
@@ -8,16 +12,17 @@ export const Logo = styled.header`
   left: 2rem;
   color: var(--white);
   z-index: 1000;
-  /* background: var(--color-main); */
+  transition: background 0.3s ease-in-out;
+  background: ${(props: LogoProps) =>
+    props.isOut ? 'var(--color-main)' : 'var(--color-sec)'};
   border-radius: 4rem;
   cursor: pointer;
-  /* animation: bgEnter 0.5s cubic-bezier(0.72, 1.49, 0.63, 0.88); */
+  animation: bgEnter 0.5s cubic-bezier(0.72, 1.49, 0.63, 0.88);
   svg {
     width: 100%;
     height: 100%;
-    /* fill: var(--color-main); */
   }
-  /* .logot {
+  .logot {
     fill: rgba(255, 255, 255, 0);
     animation: draw 1s linear forwards 0.6s;
     stroke-dasharray: 532;
@@ -50,5 +55,5 @@ export const Logo = styled.header`
       fill: rgba(255, 255, 255, 1);
       stroke-dashoffset: -632;
     }
-  } */
+  }
 `
