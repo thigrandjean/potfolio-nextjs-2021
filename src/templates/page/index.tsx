@@ -11,7 +11,7 @@ export default function PageTemplate({ title, children }: PageProps) {
     <S.PageWrapper>
       <S.CloseBtn>
         <Link href="/" aria-label="Voltar para a home">
-          <a>
+          <a className="iconlink">
             <svg
               viewBox="0 0 21 21"
               fill="none"

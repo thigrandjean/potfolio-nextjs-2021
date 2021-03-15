@@ -9,7 +9,7 @@ import * as S from './styles'
 const Bio = () => {
   const controls = useAnimation()
   const [ref, inView] = useInView({
-    rootMargin: '-200px 0px',
+    rootMargin: '-70px 0px',
   })
 
   const bioEnter = {
@@ -21,7 +21,7 @@ const Bio = () => {
       opacity: 1,
       x: 0,
       transition: {
-        staggerChildren: 0.5,
+        staggerChildren: 0.25,
       },
     },
   }

@@ -7,6 +7,7 @@ const SiteFooter = () => (
       <Link href="/contact">Enviar uma mensagem</Link>
       <a
         title="Instagram"
+        className="iconlink"
         target="_balnk"
         rel="noreferrer"
         href="https://instagram.com/thigrandjean"

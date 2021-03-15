@@ -40,9 +40,37 @@ body {
 p{
     line-height: 140%;
 }
-a {
-    color: inherit
+
+a,
+a span {
+    color: var(--color-sec);
+    transition: all 0.1s ease-in-out;
+    text-decoration: none;
+    position: relative;
+    z-index: 1;
+    &:after {
+        content: '';
+        transition: all 0.2s ease-in-out;
+        background-color: var(--color-sec);
+        height: .1em;
+        width: 100%;
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        z-index: -1;
+  }
+    &:hover {
+      color: var(--color-thi);
+        &:after {
+            height: 100%;
+            background-color: var(--color-sec);
+
+        }
+    }
 }
+a.iconlink:after {
+    display: none;
+  }
 input,
 textarea,
 button {

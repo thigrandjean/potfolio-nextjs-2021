@@ -20,8 +20,14 @@ export const FooterContent = styled.div`
   a {
     color: var(--color-main);
     transition: color 0.3s ease-in-out;
+    &:after {
+      background-color: var(--color-main);
+    }
     &:hover {
-      color: var(--color-thi);
+      color: var(--color-sec);
+      &:after {
+        background-color: var(--color-main);
+      }
     }
   }
 `
