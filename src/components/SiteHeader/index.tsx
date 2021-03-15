@@ -8,9 +8,12 @@ const SiteHeader = () => {
   const [screenHeigt, setscreenHeigt] = useState(0)
   const [siteHeigt, setsiteHeigt] = useState(0)
   const [heroProgress, setHeroProgress] = useState(screenHeigt / siteHeigt)
-  const [isOut, setisOut] = useState(false)
+  const [isOut, setisOut] = useState(true)
 
   useEffect(() => {
+    setscreenHeigt(window.innerHeight)
+    setsiteHeigt(document.body.clientHeight)
+    setHeroProgress(screenHeigt / siteHeigt)
     function handleResize() {
       setscreenHeigt(window.innerHeight)
       setsiteHeigt(document.body.clientHeight)

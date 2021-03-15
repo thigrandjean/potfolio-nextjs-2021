@@ -1,4 +1,5 @@
 import styled from 'styled-components'
+import { ExternalLink } from '@styled-icons/heroicons-outline/ExternalLink'
 
 export const Wrapper = styled.section`
   height: 100vh;
@@ -27,11 +28,18 @@ export const Wrapper = styled.section`
 export const BioLinks = styled.div`
   margin-top: 2rem;
   font-size: 1.25rem;
-  a {
+  a,
+  span {
     color: var(--color-sec);
     transition: color 0.3s ease-in-out;
+    text-decoration: underline;
     &:hover {
       color: var(--color-thi);
     }
   }
+`
+
+export const ExternalIcon = styled(ExternalLink)`
+  height: 1.6rem;
+  margin-left: 0.5rem;
 `

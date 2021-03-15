@@ -1,4 +1,5 @@
 import styled from 'styled-components'
+import { motion } from 'framer-motion'
 
 export const HeroContainer = styled.section`
   width: 100%;
@@ -15,7 +16,7 @@ export const HeroContainer = styled.section`
   right: 0;
   z-index: 0;
 `
-export const Heading = styled.h1`
+export const Heading = styled(motion.h1)`
   color: var(--white);
   background: var(--color-main);
   padding: 1rem;
@@ -25,22 +26,22 @@ export const Heading = styled.h1`
   font-weight: 400;
   z-index: 1;
 `
-export const HeroTags = styled.ul`
+export const HeroTagsList = styled(motion.ul)`
   z-index: 1;
   display: flex;
   flex-wrap: wrap;
   align-items: center;
   justify-content: center;
   margin-top: 1rem;
-  li {
-    list-style: none;
-    background: var(--color-sec);
-    border-radius: var(--radius-sm);
-    padding: 0.3rem 0.6rem;
-    margin: 0.3rem;
-    color: var(--white);
-    font-size: 1.2rem;
-  }
+`
+export const Tag = styled(motion.li)`
+  list-style: none;
+  background: var(--color-sec);
+  border-radius: var(--radius-sm);
+  padding: 0.3rem 0.6rem;
+  margin: 0.3rem;
+  color: var(--white);
+  font-size: 1.2rem;
 `
 export const HeroImage = styled.div`
   position: absolute;

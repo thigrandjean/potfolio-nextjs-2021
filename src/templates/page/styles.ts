@@ -30,18 +30,20 @@ export const CloseBtn = styled.div`
   display: flex;
   align-items: center;
   justify-content: center;
-  width: 3.75rem;
-  height: 3.75rem;
-  padding: 1rem;
-  border-radius: 50%;
-  cursor: pointer;
-  color: var(--white);
-  transition: all 0.3s ease-in-out;
-  svg {
-    width: 100%;
-  }
-  &::hover {
-    color: var(--color-sec);
-    background: rgba(255, 255, 255, 0.1);
+  a {
+    width: 3.75rem;
+    height: 3.75rem;
+    padding: 1rem;
+    border-radius: 50%;
+    cursor: pointer;
+    color: var(--white);
+    transition: all 0.3s ease-in-out;
+    svg {
+      width: 100%;
+    }
+    &:hover {
+      color: var(--color-sec);
+      background: rgba(255, 255, 255, 0.1);
+    }
   }
 `
