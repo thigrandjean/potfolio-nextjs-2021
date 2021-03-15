@@ -8,8 +8,7 @@ export const HeroContainer = styled.section`
   flex-direction: column;
   align-items: center;
   justify-content: flex-end;
-  padding-bottom: 5rem;
-  padding: 3rem;
+  padding: 3rem 3rem 15rem 3rem;
   position: sticky;
   top: 0;
   left: 0;
