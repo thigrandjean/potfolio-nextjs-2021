@@ -1,6 +1,5 @@
-import TxtBar from 'components/TxtBar'
+import PostContent from 'components/PostContent'
 import Image from 'next/image'
-// import Link from 'next/link'
 import * as S from './styles'
 
 type ImageProps = {
@@ -37,15 +36,9 @@ export default function PostList({ posts }: PostProps) {
                 objectFit="cover"
               />
             </S.PostCover>
-            <S.PostContent>
-              <S.Title>{title}</S.Title>
-              <TxtBar>{content}</TxtBar>
-              <S.Tags>
-                {tags.map((tag) => {
-                  return <li key={tag}>{tag}</li>
-                })}
-              </S.Tags>
-            </S.PostContent>
+
+            <PostContent title={title} content={content} tags={tags} />
+
             <S.IndexNum isLeft={isEven}>
               {index < 8 ? `0${index + 1}` : index + 1}
             </S.IndexNum>

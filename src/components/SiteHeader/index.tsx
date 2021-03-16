@@ -19,6 +19,14 @@ const SiteHeader = () => {
       setsiteHeigt(document.body.clientHeight)
       setHeroProgress(screenHeigt / siteHeigt)
     }
+
+    window.addEventListener('resize', handleResize)
+    return () => {
+      window.removeEventListener('resize', handleResize)
+    }
+  }, [scrollY, heroProgress, screenHeigt, siteHeigt, isOut])
+
+  useEffect(() => {
     function updateIsOut(v: number) {
       const difference = siteHeigt - screenHeigt - 50
       const isScrolledOut = v > screenHeigt && v < difference ? false : true
@@ -27,13 +35,10 @@ const SiteHeader = () => {
     const unusubscribeScroll = scrollY.onChange((v) => {
       updateIsOut(v)
     })
-
-    window.addEventListener('resize', handleResize)
     return () => {
-      window.removeEventListener('resize', handleResize)
       unusubscribeScroll()
     }
-  }, [scrollY, heroProgress, screenHeigt, siteHeigt, isOut])
+  }, [siteHeigt, screenHeigt, isOut, scrollY])
 
   return (
     <S.Logo isOut={isOut}>
