@@ -60,7 +60,9 @@ const Bio = () => {
         </motion.div>
         <motion.div variants={itemEnter}>
           <S.BioLinks>
-            <Link href="/contact">Entrar em contato</Link>
+            <Link href="/contact">
+              <a title="Entrar em contato">Entrar em contato</a>
+            </Link>
           </S.BioLinks>
         </motion.div>
         <motion.div variants={itemEnter}>

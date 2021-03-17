@@ -1,10 +1,18 @@
-import type { AppProps /*, AppContext */ } from 'next/app'
+import type { AppProps } from 'next/app'
 import Head from 'next/head'
 import SiteHeader from 'components/SiteHeader'
 import GlobalStyles from 'styles/global'
 import NextNprogress from 'nextjs-progressbar'
+import { AnimatePresence, motion } from 'framer-motion'
 
-function App({ Component, pageProps }: AppProps) {
+function App({ Component, pageProps, router }: AppProps) {
+  const spring = {
+    // type: 'spring',
+    // damping: 20,
+    // stiffness: 100,
+    when: 'afterChildren',
+  }
+
   return (
     <>
       <Head>
@@ -30,7 +38,19 @@ function App({ Component, pageProps }: AppProps) {
         options={{ showSpinner: false }}
       />
       <SiteHeader />
-      <Component {...pageProps} />
+      <AnimatePresence>
+        <div className="page-transition-wrapper">
+          <motion.div
+            transition={spring}
+            key={router.pathname}
+            initial={{ y: -30, opacity: 0 }}
+            animate={{ y: 0, opacity: 1 }}
+            exit={{ y: -30, opacity: 0 }}
+          >
+            <Component {...pageProps} key={router.pathname} />
+          </motion.div>
+        </div>
+      </AnimatePresence>
     </>
   )
 }
